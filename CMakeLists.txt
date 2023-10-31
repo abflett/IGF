@@ -13,3 +13,5 @@ project ("IGF")
 
 # Include sub-projects.
 add_subdirectory ("IGFCore")
+
+set(BUILD_SHARED_LIBS OFF)
