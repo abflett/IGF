@@ -1,3 +1,17 @@
 ﻿cmake_minimum_required (VERSION 3.26)
 
-project ("IGF")
+project ("IGF" VERSION 0.0.1)
+
+# set(CMAKE_BINARY_DIR ${CMAKE_SOURCE_DIR}/build)
+# set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE ${CMAKE_BINARY_DIR}/Release)
+# set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG ${CMAKE_BINARY_DIR}/Debug)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+# Option to build shared or static library
+option(BUILD_SHARED_LIBS "Build shared libraries" ON)
+
+add_subdirectory(src)
