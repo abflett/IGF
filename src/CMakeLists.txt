@@ -2,13 +2,10 @@
     IGF.cpp
 )
 
-# Determine library type based on the option
-if(BUILD_SHARED_LIBS)
-    add_library(${PROJECT_NAME} SHARED ${SOURCE_FILES})
-else()
-    add_library(${PROJECT_NAME} STATIC ${SOURCE_FILES})
-endif()
+add_library(someLib ${SOURCE_FILES})
 
-target_include_directories(${PROJECT_NAME}
+target_link_libraries(someLib PRIVATE external)
+
+target_include_directories(someLib
     PUBLIC ${CMAKE_SOURCE_DIR}/include
 )
