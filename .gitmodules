@@ -1,3 +1,0 @@
-[submodule "IGFCore/external/SDL"]
-	path = IGFCore/external/SDL
-	url = git@github.com:libsdl-org/SDL.git
