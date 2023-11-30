@@ -14,4 +14,5 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 # Option to build shared or static library
 option(BUILD_SHARED_LIBS "Build shared libraries" ON)
 
+add_subdirectory(external)
 add_subdirectory(src)
