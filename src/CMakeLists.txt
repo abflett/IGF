@@ -2,10 +2,9 @@
     IGF.cpp
 )
 
-add_library(someLib ${SOURCE_FILES})
+set(BUILD_SHARED_LIBS OFF)
 
-target_link_libraries(someLib PRIVATE external)
+add_library(core STATIC ${SOURCE_FILES})
+target_include_directories(core PUBLIC ${CMAKE_SOURCE_DIR}/include)
 
-target_include_directories(someLib
-    PUBLIC ${CMAKE_SOURCE_DIR}/include
-)
+target_link_libraries(core PRIVATE SDL3::SDL3)
